@@ -402,6 +402,42 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Smooth scroll reveal transition
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.08,
+                rootMargin: "0px 0px -40px 0px"
+            };
 
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const selectors = [
+                '.about-page-hero h1',
+                '.about-intro',
+                '.vision-card',
+                '.methods-card',
+                '.team-header',
+                '.team-card',
+                '.roadmap-section h2',
+                '.roadmap-layout',
+                '.segments-card',
+                '.team-image-container',
+                '.footer-card'
+            ];
+
+            document.querySelectorAll(selectors.join(', ')).forEach(el => {
+                el.classList.add('reveal');
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>

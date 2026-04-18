@@ -104,5 +104,36 @@
         </footer>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.05,
+                rootMargin: "0px 0px -20px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const selectors = [
+                '.registration-form-container',
+                '.form-title',
+                '.form-row',
+                '.form-group',
+                '.form-actions',
+                '.form-footer'
+            ];
+
+            document.querySelectorAll(selectors.join(', ')).forEach(el => {
+                el.classList.add('reveal');
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>

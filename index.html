@@ -74,11 +74,11 @@
             <div class="features-details">
                 <div class="feature-detail-item">
                     <h3>Learning through Assignments</h3>
-                    <p>Regular tasks for the students to provide<br>them with practical knowledge about trading.</p>
+                    <p>Regular tasks for the students to provide them with practical knowledge about trading.</p>
                 </div>
                 <div class="feature-detail-item">
                     <h3>Personal attentions</h3>
-                    <p>Mentors will keep in touch with one students to<br>ensure that they are following the sessions properly.</p>
+                    <p>Mentors will keep in touch with one students to ensure that they are following the sessions properly.</p>
                 </div>
             </div>
         </section>
@@ -363,8 +363,8 @@
         // Smooth scroll reveal transition
         document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
+                threshold: 0.08,
+                rootMargin: "0px 0px -40px 0px"
             };
 
             const observer = new IntersectionObserver((entries) => {
@@ -376,8 +376,19 @@
                 });
             }, observerOptions);
 
-            const revealElements = document.querySelectorAll('.hero-text-container, .value-prop-card, .team-image-container, .features-header, .feature-detail-item, .contact-card, .footer-card');
-            revealElements.forEach(el => {
+            const selectors = [
+                '.hero-text-container',
+                '.value-prop-card',
+                '.team-image-container',
+                '.features-header',
+                '.feature-pills-container',
+                '.feature-detail-item',
+                '.section-title',
+                '.contact-card',
+                '.footer-card'
+            ];
+
+            document.querySelectorAll(selectors.join(', ')).forEach(el => {
                 el.classList.add('reveal');
                 observer.observe(el);
             });
