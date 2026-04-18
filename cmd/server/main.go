@@ -30,10 +30,13 @@ func main() {
 	// Page routes
 	mux.HandleFunc("/", h.ServeIndex)
 	mux.HandleFunc("/about", h.ServeAbout)
+	mux.HandleFunc("/about/", h.ServeAbout) // handle trailing slash
 	mux.HandleFunc("/form", h.ServeForm)
+	mux.HandleFunc("/form/", h.ServeForm)   // handle trailing slash
 
 	// Form submission API endpoint
 	mux.HandleFunc("/contact", h.HandleContact)
+	mux.HandleFunc("/contact/", h.HandleContact)
 
 	// Wrap the mux with middleware (Recovery → CORS → Logger → mux)
 	wrappedMux := middleware.Chain(mux,
