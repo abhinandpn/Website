@@ -263,15 +263,20 @@ main {
 }
 
 .welcome-block h2 {
-    font-family: var(--font-body);
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 12px;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+    color: #ffffff;
 }
 
 .welcome-block p {
-    font-size: 0.95rem;
-    line-height: 1.7;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #dddddd;
 }
 
 .value-prop-card {
@@ -910,14 +915,31 @@ textarea {
 }
 
 .vision-card h3 {
-    font-size: 1.6rem;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
     color: #00ff00;
     margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    animation: vision-glow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes vision-glow {
+    0% { 
+        text-shadow: 0 0 5px rgba(0, 255, 0, 0.2); 
+    }
+    100% { 
+        text-shadow: 0 0 15px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.4); 
+    }
 }
 
 .vision-card p {
-    color: #cccccc;
-    font-size: 1.05rem;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #dddddd;
 }
 
 /* Methods */
