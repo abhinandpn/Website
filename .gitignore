@@ -1,0 +1,19 @@
+# Go binary outputs
+/bin/
+*.exe
+*.out
+
+# Go module cache
+go.sum
+
+# Environment variables
+.env
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
