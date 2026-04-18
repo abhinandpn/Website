@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Form | Stock-Ed Trading Company</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="form-page-body">
+
+    <div class="form-page-wrapper">
+        <div class="form-top-bar">
+            <a href="index.html" class="btn-home">HOME <span class="nav-triangle">◁</span></a>
+        </div>
+
+        <div class="registration-form-container">
+            <h1 class="form-title text-center">STOCK-ED TRADING ONLINE FORM</h1>
+            
+            <form class="stock-ed-form" onsubmit="event.preventDefault();">
+                <!-- Row 1 -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name <span class="asterisk">*</span></label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Place <span class="asterisk">*</span></label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Contact No <span class="asterisk">*</span></label>
+                        <input type="tel" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email id <span class="asterisk">*</span></label>
+                        <input type="email" class="form-input" required>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Current Status <span class="asterisk">*</span></label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Course <span class="asterisk">*</span></label>
+                        <input type="text" class="form-input" required>
+                    </div>
+                </div>
+
+                <!-- Row 4: Trading Background Radio Group -->
+                <div class="form-group full-width">
+                    <label>Trading Background <span class="asterisk">*</span></label>
+                    <div class="radio-options-row">
+                        <label class="radio-card">
+                            <input type="radio" name="trading_background" value="beginner" required>
+                            <span class="custom-radio"></span>
+                            Beginner Level
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="trading_background" value="intermediate">
+                            <span class="custom-radio"></span>
+                            Intermediate Level
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="trading_background" value="advanced">
+                            <span class="custom-radio"></span>
+                            Advanced Level
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Agreement Checkbox -->
+                <div class="form-group full-width text-center agreement-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span class="custom-checkbox"></span>
+                        I agree to the Privacy Policy and Terms & Conditions <span class="asterisk">*</span>
+                    </label>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-actions text-center">
+                    <button type="submit" class="btn-submit">SUBMIT <span class="btn-triangle">▽</span></button>
+                </div>
+            </form>
+        </div>
+
+        <footer class="form-footer">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Stock-Ed Logo" class="logo-img">
+                <span class="logo-text">STOCK-ED</span>
+            </div>
+            <p class="copyright">&copy; STOCK-ED. 2024 | Designed by abhinand_pn</p>
+        </footer>
+    </div>
+
+</body>
+</html>
